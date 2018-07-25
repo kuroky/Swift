@@ -15,14 +15,37 @@ class URLViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView2: UIWebView!
     
     @IBAction func send(_ sender: UIButton) {
-        let url:URL = URL(string: myURL.text!)!
+        let urlString = verifyUrlText()
+        if urlString.count == 0 {
+            return
+        }
+        let url:URL = URL(string: urlString)!
         let controller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func load(_ sender: UIButton) {
-        let request = URLRequest(url: URL(string: myURL.text!)!)
+        let urlString = verifyUrlText()
+        if urlString.count == 0 {
+            return
+        }
+        
+        let request = URLRequest(url: URL(string: urlString)!)
         self.webView2.loadRequest(request)
+    }
+    
+    func verifyUrlText() -> String {
+        let urlString: String = myURL.text!
+        if urlString.count == 0 {
+            let alertController = UIAlertController(title: "提示", message: "请输入地址", preferredStyle: .alert)
+            let action = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+            alertController.addAction(action)
+            self.present(alertController, animated: true, completion: nil)
+            return ""
+        }
+        else {
+            return urlString
+        }
     }
     
     override func viewDidLoad() {

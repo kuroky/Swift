@@ -176,6 +176,7 @@
 				TargetAttributes = {
 					075FD2FA1A34AB1B00513A3A = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 6AALX2VQ24;
 						LastSwiftMigration = 0910;
 					};
 					075FD30F1A34AB1B00513A3A = {
@@ -376,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AALX2VQ24;
 				INFOPLIST_FILE = Airdrop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -390,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AALX2VQ24;
 				INFOPLIST_FILE = Airdrop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

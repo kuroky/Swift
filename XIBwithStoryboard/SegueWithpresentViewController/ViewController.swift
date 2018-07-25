@@ -15,11 +15,15 @@ class ViewController: UIViewController {
         let viewController:UIViewController = storyboard.instantiateViewController(withIdentifier: "NewViewController") 
         self.present(viewController, animated: true,
             completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            viewController.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func buttonAction2(_ sender: UIButton) {
         
-        let newControlador = UIViewController (nibName: "NewClass", bundle: nil)
+        let newControlador = NewClass(nibName: "NewClass", bundle: nil)
         self.present(newControlador, animated: true,
             completion: nil)
     }

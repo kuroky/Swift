@@ -8,10 +8,15 @@
 
 import UIKit
 
-class NuevaClase: UIViewController {
+class NewClass: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    @IBAction func dissController(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

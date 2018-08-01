@@ -23,11 +23,14 @@ class ViewController: UIViewController {
             print("you have pressed OK button");
         }
         alertController.addAction(OKAction)
-        
+    
         self.present(alertController, animated: true, completion:{ () -> Void in
-            //your code here
+            print("your code here")
         })
         
+//        self.present(alertController, animated: true) {
+            //print("your code here")
+//        }
     }
 
     @IBAction func actionSheet(_ sender: AnyObject) {
